@@ -1,5 +1,3 @@
-import emptyList from './custom_event.js';
-import booksSections from './booksui.js';
 import { getBooks, storeBooks } from './storage.js';
 
 class Books {
