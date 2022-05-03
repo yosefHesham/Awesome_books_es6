@@ -161,3 +161,7 @@ footer {
 .contact-item {
   list-style: circle;
 }
+.date {
+  text-align: right;
+  margin-right: 10%;
+}
