@@ -40,12 +40,32 @@ const removeBook = (bookTitle, event) => {
 };
 const setRemoveButtonListnters = () => {
   const removeButton = document.querySelectorAll(".btn");
-
   removeButton.forEach((e) =>
     e.addEventListener("click", (event) => removeBook(e.classList[1], event))
   );
 };
 setRemoveButtonListnters();
+
+const addBook = (title, author) => {
+  Books.addBook(title, author);
+  if (Books.books.length === 1) {
+    booksSections.dispatchEvent(emptyList);
+  }
+  const removeButton = document.createElement("div");
+  removeButton.innerHTML = `<div type="button" class="btn ${title}">Remove</div>`;
+  removeButton.firstChild.addEventListener("click", (event) =>
+    removeBook(title, event)
+  );
+  const bookTemplate = document.createElement("bookTemp");
+  bookTemplate.innerHTML = `<div class="items-container ${
+    Books.books.length % 2 === 0 ? "gray" : "white"
+  }">
+  <h2>${title} by <span> ${author} </span></h2>
+  </div>`;
+  bookTemplate.firstChild.appendChild(removeButton.firstChild);
+  booksSections.appendChild(bookTemplate.firstChild);
+};
+
 submitButton.addEventListener("click", () => {
   const title = form.elements.title.value;
   const author = form.elements.author.value;
@@ -54,12 +74,14 @@ submitButton.addEventListener("click", () => {
   }
   form.elements.title.value = "";
   form.elements.author.value = "";
-  Books.addBook(title, author);
-  renderBooks();
-  setRemoveButtonListnters();
+  addBook(title, author);
 });
 booksSections.addEventListener("emptyList", () => {
-  booksSections.innerHTML = "<p>You dont have books yet, add some !</p>";
+  if (Books.books.length === 0) {
+    booksSections.innerHTML = "<p>You dont have books yet, add some !</p>";
+  } else {
+    booksSections.firstChild.remove();
+  }
 });
 
 export default booksSections;
