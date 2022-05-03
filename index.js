@@ -32,17 +32,17 @@ const fetchAndRenderBooks = () => {
   renderBooks();
 };
 window.onload = fetchAndRenderBooks();
-
+const removeBook = (bookTitle, event) => {
+  Books.removeBook(bookTitle, event);
+  if (Books.books.length === 0) {
+    booksSections.dispatchEvent(emptyList);
+  }
+};
 const setRemoveButtonListnters = () => {
   const removeButton = document.querySelectorAll(".btn");
+
   removeButton.forEach((e) =>
-    e.addEventListener("click", (event) => {
-      const bookTitle = e.classList[1];
-      Books.removeBook(bookTitle, event);
-      if (Books.books.length === 0) {
-        booksSections.dispatchEvent(emptyList);
-      }
-    })
+    e.addEventListener("click", (event) => removeBook(e.classList[1], event))
   );
 };
 setRemoveButtonListnters();
