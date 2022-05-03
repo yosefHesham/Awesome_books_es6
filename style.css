@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+header {
+  width: 98%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.nav-bar {
+  width: 20%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+ul li:active {
+  color: blue;
+}
+
+.book-list {
+  width: 95%;
+  margin: 5px auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.books {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.items-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.white {
+  background-color: white !important;
+}
+
+.gray {
+  background-color: lightgray !important;
+}
+
+.btn {
+  padding: 0 5%;
+  height: 5vh;
+  margin-right: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px #888;
+  cursor: pointer;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+hr {
+  width: 20%;
+  margin: 15px auto;
+}
+
+.add-section {
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-bottom: 10%;
+}
+
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.submit-button {
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 5px 10px;
+  box-shadow: 2px 2px #888;
+  cursor: pointer;
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+footer p {
+  margin-left: 10px;
+}
+
+.contact p {
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8rem;
+}
+
+footer {
+  width: 95%;
+  text-align: start;
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  left: 2.5%;
+  bottom: 5px;
+  border: 1px solid black;
+}
+
+.contact-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section p {
+  align-self: center;
+  margin-right: 20%;
+}
+
+.contact-list {
+  display: block;
+}
+
+.contact-item {
+  list-style: circle;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Awesome Books | Stan and Yousef</title>
+  </head>
+  <body>
+    <header>
+      <h1>Awesome books</h1>
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="list">List</li>
+          <li class="add-new">Add New</li>
+          <li class="contact">Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="books">
+      <h2>All Awesome Books</h2>
+      <article class="book-list"></article>
+    </section>
+    <section class="add-section">
+      <h2 class="add-header">Add a new book</h2>
+      <form
+        action="https://formspree.io/f/meqnzwlb"
+        method="post"
+        class="form-input"
+      >
+        <div class="form-title">
+          <input
+            type="text"
+            name="title"
+            id="name"
+            placeholder="Title"
+            required
+          />
+        </div>
+        <div class="form-author">
+          <input
+            type="text"
+            name="author"
+            id="author"
+            placeholder="Author"
+            required
+          />
+        </div>
+      </form>
+      <div class="submit-button">Add</div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Information</h2>
+      <p>
+        Do you have a word with us or do you want to say Hello?<br />Reach out
+        us at
+      </p>
+      <ul class="contact-list">
+        <li class="contact-item">Email: awesomebooks@awesomebooks.org</li>
+        <li class="contact-item">Phone No:+201587953325555</li>
+        <li class="contact-item">Our address Streetname 22, 80867, city.</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Copy right by awesomebooks</p>
+    </footer>
+    <script type="module" src="js/booksui.js"></script>
+    <script type="module" src="books.js"></script>
+    <script type="module" src="js/book_collection.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+  </body>
+</html>
