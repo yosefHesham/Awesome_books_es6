@@ -1,3 +1,3 @@
-const emptyList = new CustomEvent("emptyList");
+const emptyList = new CustomEvent('emptyList');
 
 export default emptyList;

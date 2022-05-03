@@ -1,4 +1,5 @@
 import { DateTime } from "./luxon.js";
+
 const dateElement = document.querySelector(".date");
 
 const showDate = () => {
