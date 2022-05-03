@@ -1,6 +1,6 @@
-import Books from "./js/book_collection.js";
-import emptyList from "./js/custom_event.js";
-import booksSections from "./js/booksui.js";
+import Books from "./modules/book_collection.js";
+import emptyList from "./modules/custom_event.js";
+import booksSections from "./modules/booksui.js";
 
 const form = document.querySelector("form");
 const submitButton = document.querySelector(".submit-button");
