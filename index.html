@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
     <title>Awesome Books | Stan and Yousef</title>
   </head>
   <body>
@@ -18,6 +18,7 @@
         </ul>
       </nav>
     </header>
+    <p class="date"></p>
     <section class="books">
       <h2>All Awesome Books</h2>
       <article class="book-list"></article>
@@ -66,9 +67,14 @@
     <footer>
       <p>Copy right by awesomebooks</p>
     </footer>
-    <script type="module" src="js/booksui.js"></script>
-    <script type="module" src="books.js"></script>
-    <script type="module" src="js/book_collection.js"></script>
-    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="modules/book_collection.js"></script>
+    <script type="module" src="modules/booksui.js"></script>
+    <script type="module" src="modules/custom_event.js"></script>
+    <script type="module" src="modules/navigation.js"></script>
+    <script type="module" src="modules/json_handler.js"></script>
+    <script type="module" src="modules/storage.js"></script>
+    <script type="module" src="modules/luxon.js"></script>
+    <script type="module" src="modules/show_date.js"></script>
   </body>
 </html>
