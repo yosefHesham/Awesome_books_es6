@@ -1,6 +1,7 @@
 import Books from "./modules/book_collection.js";
 import emptyList from "./modules/custom_event.js";
 import booksSections from "./modules/booksui.js";
+import { getBooks, storeBooks } from "./modules/storage.js";
 
 const form = document.querySelector("form");
 const submitButton = document.querySelector(".submit-button");
@@ -25,8 +26,8 @@ const renderBooks = () => {
 };
 
 const fetchAndRenderBooks = () => {
-  if (!localStorage.getItem("books")) {
-    localStorage.setItem("books", JSON.stringify(Books.books));
+  if (!getBooks()) {
+    storeBooks(Books.books);
   }
   renderBooks();
 };

@@ -1,8 +1,4 @@
-const toJson = (books) => {
-  return JSON.stringify(books);
-};
-const fromJson = (books) => {
-  return JSON.parse(books);
-};
+const toJson = (books) => JSON.stringify(books);
+const fromJson = (books) => JSON.parse(books);
 
 export { toJson, fromJson };
